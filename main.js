@@ -2,12 +2,12 @@ const botoes = document.querySelectorAll('.botao');
 const textos = document.querySelectorAll('.aba-conteudo')
 for(let i=0; i<botoes.length; i++){
     botoes[i].onclick = function(){
-       
-        botoes[i].classList.add('ativo');
-        botoes[i-1].classList.remove('ativo');
 
+            botoes[i-1].classList.remove('ativo');
+            textos[i-1].classList.remove('ativo');
+
+        botoes[i].classList.add('ativo');
         textos[i].classList.add('ativo');
-        textos[i-1].classList.remove('ativo');
     }
 }
 const contadores = document.querySelectorAll(".contador");

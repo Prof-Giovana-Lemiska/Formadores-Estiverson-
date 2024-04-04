@@ -4,8 +4,9 @@ for(let i=0; i<botoes.length; i++){
     botoes[i].onclick = function(){
        
         botoes[i].classList.add('ativo');
-        textos[i].classList.add('ativo');
         botoes[i-1].classList.remove('ativo');
+
+        textos[i].classList.add('ativo');
         textos[i-1].classList.remove('ativo');
     }
 }

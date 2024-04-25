@@ -40,4 +40,9 @@ function atualizaCronometro(){
         
 }
 
-setInterval(atualizaCronometro, 1000);
+function comecaConometro (){
+    
+    setInterval(atualizaCronometro, 1000);
+}
+
+comecaConometro();

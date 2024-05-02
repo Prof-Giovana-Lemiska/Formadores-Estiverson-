@@ -31,26 +31,26 @@ function calculaTempo(tempoObjetivo) {
     minutos %= 60;
     horas %= 24;
     if (tempoFinal > 0) {
-        let contador = '';
-        contador += '<div class ="contador-digito">';
-        contador += '<p class="contador-digito-numero"> +dias+ </p> ';
-        contador += '<p class="contador-digito-texto"> dias </p> ';
-        contador += '</div>';
+let contador = '';
+contador += '<div class="contador-digito">';
+contador += '   <p class="contador-digito-numero">'+dias+'</p>';
+contador += '   <p class="contador-digito-texto">dias</p>';
+contador += '</div>';
 
-        contador += '<div class ="contador-digito">';
-        contador += '<p class="contador-digito-numero"> +horas+ </p> ';
-        contador += '<p class="contador-digito-texto"> horas </p> ';
-        contador += '</div>';
+contador += '<div class="contador-digito">';
+contador += '   <p class="contador-digito-numero">'+horas+'</p>';
+contador += '   <p class="contador-digito-texto">horas</p>';
+contador += '</div>';
 
-        contador += '<div class ="contador-digito">';
-        contador += '<p class="contador-digito-numero"> +minutos+ </p> ';
-        contador += '<p class="contador-digito-texto"> minutos </p> ';
-        contador += '</div>';
+contador += '<div class="contador-digito">';
+contador += '   <p class="contador-digito-numero">'+minutos+'</p>';
+contador += '   <p class="contador-digito-texto">minutos</p>';
+contador += '</div>';
 
-        contador += '<div class ="contador-digito">';
-        contador += '<p class="contador-digito-numero"> +segundos+ </p> ';
-        contador += '<p class="contador-digito-texto"> segundos </p> ';
-        contador += '</div>';
+contador += '<div class="contador-digito">';
+contador += '   <p class="contador-digito-numero">'+segundos+'</p>';
+contador += '   <p class="contador-digito-texto">segundos</p>';
+contador += '</div>';
 
         return contador;
 

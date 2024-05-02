@@ -54,6 +54,7 @@ contador += '</div>';
 
         return contador;
 
+        
     } else {
         return "Prazo finalizado"
     }

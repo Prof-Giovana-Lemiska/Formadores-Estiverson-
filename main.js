@@ -1,8 +1,8 @@
 const botoes = document.querySelectorAll('.botao');
 const textos = document.querySelectorAll('.aba-conteudo')
-for(let i=0; i<botoes.length; i++){
-    botoes[i].onclick = function(){
-        for(let j = 0; j<botoes.length; j++){
+for (let i = 0; i < botoes.length; i++) {
+    botoes[i].onclick = function () {
+        for (let j = 0; j < botoes.length; j++) {
             botoes[j].classList.remove('ativo');
             textos[j].classList.remove('ativo');
         }
@@ -29,22 +29,47 @@ function calculaTempo(tempoObjetivo) {
     let dias = Math.floor(horas / 24);
     segundos %= 60;
     minutos %= 60;
-    horas %= 24; 
-    if(tempoFinal>0){
-        return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
-    }else{
+    horas %= 24;
+    if (tempoFinal > 0) {
+        let contador = '';
+        contador += '<div class ="contador-digito">';
+        contador += '<p class="contador-digito-numero"> +dias+ </p> ';
+        contador += '<p class="contador-digito-texto"> dias </p> ';
+        contador += '</div>';
+
+        let contador = '';
+        contador += '<div class ="contador-digito">';
+        contador += '<p class="contador-digito-numero"> +horas+ </p> ';
+        contador += '<p class="contador-digito-texto"> horas </p> ';
+        contador += '</div>';
+
+        let contador = '';
+        contador += '<div class ="contador-digito">';
+        contador += '<p class="contador-digito-numero"> +minutos+ </p> ';
+        contador += '<p class="contador-digito-texto"> minutos </p> ';
+        contador += '</div>';
+
+        let contador = '';
+        contador += '<div class ="contador-digito">';
+        contador += '<p class="contador-digito-numero"> +segundos+ </p> ';
+        contador += '<p class="contador-digito-texto"> segundos </p> ';
+        contador += '</div>';
+
+        return contador;
+
+    } else {
         return "Prazo finalizado"
     }
 }
 
-function atualizaCronometro(){
-    for(let i = 0; i<contadores.length; i++){
-        contadores[i].textContent = calculaTempo(tempos[i]);
-        }
-        
+function atualizaCronometro() {
+    for (let i = 0; i < contadores.length; i++) {
+        contadores[i].innerHTML = calculaTempo(tempos[i]);
+    }
+
 }
 
-function comecaConometro (){
+function comecaConometro() {
     atualizaCronometro();
     setInterval(atualizaCronometro, 1000);
 }

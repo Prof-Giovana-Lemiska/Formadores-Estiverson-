@@ -61,6 +61,26 @@ body {
 }
 
 
+.contador{
+    display: flex;
+    justify-content: center;
+}
+
+.contador-digito{
+    padding: 0 16px;
+    min-width: 100px;
+}
+
+.contador-digito-numero{
+    font-size: 18px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color: var(--verde);
+    margin: 0;
+}
+
 @media screen and (min-width: 768px) {
     .botoes {
         display: flex;
@@ -98,24 +118,4 @@ body {
     text-align: center;
     color: var(--verde);
     text-transform: uppercase;
-}
-
-.contador{
-    display: flex;
-    justify-content: center;
-}
-
-.contador-digito{
-    padding: 0 16px;
-    min-width: 100px;
-}
-
-.contador-digito-numero{
-    font-size: 18px;
-    margin: 0;
-}
-
-.contador-digito-texto{
-    color: var(--verde);
-    margin: 0;
 }
